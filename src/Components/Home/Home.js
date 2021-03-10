@@ -8,7 +8,7 @@ const Home = () => {
     useEffect(() => {
         fetch('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
             .then(res => res.json())
-            .then(data => setLeagueList(data.leagues.slice(0, 30)))
+            .then(data => setLeagueList(data.leagues.slice(0, 15)))
     }, [])
     return (
         <div className="main" >
