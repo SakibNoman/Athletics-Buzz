@@ -1,0 +1,16 @@
+.back-img {
+  max-height: 50vh;
+  opacity: 0.8;
+  z-index: 0;
+}
+.app-name {
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.league-image {
+  width: 12%;
+}

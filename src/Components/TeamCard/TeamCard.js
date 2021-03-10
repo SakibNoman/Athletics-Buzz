@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const TeamCard = (props) => {
     const { idLeague } = props;
     const [league, setLeague] = useState({});
-    const { strLeague, strBadge, strSport, strGender } = league;
+    const { strLeague, strBadge, strSport } = league;
 
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${idLeague}`)
