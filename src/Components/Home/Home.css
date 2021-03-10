@@ -1,3 +1,9 @@
 .main {
-  background-color: #3e1252;
+  background: rgb(65, 18, 19);
+  background: linear-gradient(
+    142deg,
+    rgba(65, 18, 19, 1) 8%,
+    rgba(171, 39, 61, 1) 36%,
+    rgba(72, 0, 75, 1) 83%
+  );
 }

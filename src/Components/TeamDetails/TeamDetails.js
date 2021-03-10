@@ -12,7 +12,7 @@ import './TeamDetails.css';
 const TeamDetails = () => {
     const [league, setLeague] = useState({})
     const { leagueId, leagueName } = useParams();
-    const { strGender, strSport, strCountry, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strWebsite } = league;
+    const { strGender, strSport, strCountry, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook } = league;
     console.log(league);
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${leagueId}`)
@@ -59,8 +59,8 @@ const TeamDetails = () => {
             </Container>
             <Container className="pb-1" >
                 <div className="d-flex justify-content-center" >
-                    <a href={"https://" + strWebsite} target="_blank" ><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faFacebook} /></a>
-                    <a href={"https://" + strTwitter} target="_blank"><FontAwesomeIcon className="icon fa-2x " color="Dodgerblue" icon={faTwitter} /></a>
+                    <a href={"https://" + strFacebook} target="_blank" ><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faFacebook} /></a>
+                    <a href={"https://" + strTwitter} target="_blank"><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faTwitter} /></a>
                     <a href={"https://" + strYoutube} target="_blank"><FontAwesomeIcon className="icon fa-2x" color="red" icon={faYoutube} /></a>
                 </div>
             </Container>

@@ -4,14 +4,12 @@ import TeamCard from '../TeamCard/TeamCard';
 import './Home.css';
 
 const Home = () => {
-
     const [leagueList, setLeagueList] = useState([]);
     useEffect(() => {
         fetch('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
             .then(res => res.json())
             .then(data => setLeagueList(data.leagues.slice(0, 30)))
     }, [])
-
     return (
         <div className="main" >
             <Container>

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './TeamCard.css';
 
 const TeamCard = (props) => {
     const { idLeague } = props;
@@ -17,7 +18,7 @@ const TeamCard = (props) => {
 
     return (
         <div className="col-md-4 p-3 " >
-            <Card className="p-2" style={{ width: '23rem' }}>
+            <Card as={Link} to={"/league/" + idLeague + "/" + strLeague} className="p-2 league-card" style={{ textDecoration: "none", color: "inherit" }}>
                 <Card.Img className="w-50 mx-auto " variant="top" src={strBadge} />
                 <Card.Body className="d-flex flex-column justify-content-center " >
                     <Card.Title className="text-center" >{strLeague}</Card.Title>
