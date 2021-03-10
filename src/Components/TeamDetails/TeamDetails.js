@@ -44,7 +44,7 @@ const TeamDetails = () => {
                             <p> <FontAwesomeIcon className="mr-2" icon={faBaseballBall} /> Sport type: {strSport}</p>
                             <p> <FontAwesomeIcon className="mr-2" icon={faMars} /> Gender: {strGender}</p>
                         </div>
-                        <div class="text-right col-md-6 " >
+                        <div className="text-right col-md-6 " >
                             {
                                 <img className="img-fluid rounded" src={genderImage} alt="" />
                             }
@@ -59,9 +59,9 @@ const TeamDetails = () => {
             </Container>
             <Container className="pb-1" >
                 <div className="d-flex justify-content-center" >
-                    <a href={"https://" + strFacebook} target="_blank" ><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faFacebook} /></a>
-                    <a href={"https://" + strTwitter} target="_blank"><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faTwitter} /></a>
-                    <a href={"https://" + strYoutube} target="_blank"><FontAwesomeIcon className="icon fa-2x" color="red" icon={faYoutube} /></a>
+                    <a href={"https://" + strFacebook} ><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faFacebook} /></a>
+                    <a href={"https://" + strTwitter}><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faTwitter} /></a>
+                    <a href={"https://" + strYoutube}><FontAwesomeIcon className="icon fa-2x" color="red" icon={faYoutube} /></a>
                 </div>
             </Container>
         </div>
