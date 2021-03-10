@@ -1,4 +1,4 @@
-import { faFacebook, faTwitterSquare, faYoutubeSquare } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faBaseballBall, faClosedCaptioning, faFlagCheckered, faMars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
@@ -7,11 +7,13 @@ import { useParams } from 'react-router';
 import femaleImage from '../../images/female-min.png';
 import maleImage from '../../images/male-min.png';
 import maleFemale from '../../images/maleFemale.jpg';
+import './TeamDetails.css';
 
 const TeamDetails = () => {
     const [league, setLeague] = useState({})
     const { leagueId, leagueName } = useParams();
-    const { strGender, strSport, strCountry, intFormedYear, strDescriptionEN } = league;
+    const { strGender, strSport, strCountry, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strWebsite } = league;
+    console.log(league);
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${leagueId}`)
             .then(res => res.json())
@@ -31,36 +33,38 @@ const TeamDetails = () => {
     }
 
     return (
-        <>
-            <Container className="bg-dark rounded text-white" >
-                <div className="row p-3 ">
-                    <div className=" d-flex flex-column justify-content-center col-md-6" >
-                        <h5 className="mb-4 font-weight-bold" >{leagueName}</h5>
-                        <p> <FontAwesomeIcon className="mr-2" icon={faClosedCaptioning} /> Founded: {intFormedYear}</p>
-                        <p> <FontAwesomeIcon className="mr-2" icon={faFlagCheckered} /> Country: {strCountry}</p>
-                        <p> <FontAwesomeIcon className="mr-2" icon={faBaseballBall} /> Sport type: {strSport}</p>
-                        <p> <FontAwesomeIcon className="mr-2" icon={faMars} /> Gender: {strGender}</p>
+        <div className="detailsBody">
+            <div className="pt-5" >
+                <Container className="info-card rounded text-white" >
+                    <div className="row p-3 ">
+                        <div className=" d-flex flex-column justify-content-center col-md-6" >
+                            <h5 className="mb-4 font-weight-bold" >{leagueName}</h5>
+                            <p> <FontAwesomeIcon className="mr-2" icon={faClosedCaptioning} /> Founded: {intFormedYear}</p>
+                            <p> <FontAwesomeIcon className="mr-2" icon={faFlagCheckered} /> Country: {strCountry}</p>
+                            <p> <FontAwesomeIcon className="mr-2" icon={faBaseballBall} /> Sport type: {strSport}</p>
+                            <p> <FontAwesomeIcon className="mr-2" icon={faMars} /> Gender: {strGender}</p>
+                        </div>
+                        <div class="text-right col-md-6 " >
+                            {
+                                <img className="img-fluid rounded" src={genderImage} alt="" />
+                            }
+                        </div>
                     </div>
-                    <div class="text-right col-md-6 " >
-                        {
-                            <img className="img-fluid rounded" src={genderImage} alt="" />
-                        }
-                    </div>
-                </div>
-            </Container>
+                </Container>
+            </div>
             <Container>
-                <div>
+                <div className="text-white py-4" >
                     <p>{strDescriptionEN}</p>
                 </div>
             </Container>
-            <Container>
-                <div>
-                    <FontAwesomeIcon icon={faFacebook} />
-                    <FontAwesomeIcon icon={faTwitterSquare} />
-                    <FontAwesomeIcon icon={faYoutubeSquare} />
+            <Container className="pb-1" >
+                <div className="d-flex justify-content-center" >
+                    <a href={"https://" + strWebsite} target="_blank" ><FontAwesomeIcon className="icon fa-2x" color="Dodgerblue" icon={faFacebook} /></a>
+                    <a href={"https://" + strTwitter} target="_blank"><FontAwesomeIcon className="icon fa-2x " color="Dodgerblue" icon={faTwitter} /></a>
+                    <a href={"https://" + strYoutube} target="_blank"><FontAwesomeIcon className="icon fa-2x" color="red" icon={faYoutube} /></a>
                 </div>
             </Container>
-        </>
+        </div>
     );
 };
 
