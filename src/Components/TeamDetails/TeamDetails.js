@@ -43,7 +43,7 @@ const TeamDetails = () => {
         <div className="detailsBody">
 
             {/* information card */}
-            <div className=" p-5 " >
+            <div className=" p-4 " >
                 <Container className="info-card rounded text-white" >
                     <div className="row p-3 ">
 

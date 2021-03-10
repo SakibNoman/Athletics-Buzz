@@ -20,3 +20,12 @@
 .league-image {
   width: 12%;
 }
+@media only screen and (max-width: 700px) {
+  .app-name {
+    font-size: 7vw;
+    top: 25%;
+  }
+  .league-image {
+    width: 22%;
+  }
+}
