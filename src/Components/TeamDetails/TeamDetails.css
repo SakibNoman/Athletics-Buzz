@@ -2,6 +2,8 @@
   margin-left: 15px;
   width: 30px;
 }
+
+/* background color of full body */
 .detailsBody {
   background: rgb(65, 18, 19);
   background: linear-gradient(
@@ -11,6 +13,8 @@
     rgba(72, 0, 75, 1) 83%
   );
 }
+
+/* background color of information card */
 .info-card {
   background: rgb(65, 18, 19);
   background: linear-gradient(

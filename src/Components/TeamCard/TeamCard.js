@@ -6,10 +6,17 @@ import { Link } from 'react-router-dom';
 import './TeamCard.css';
 
 const TeamCard = (props) => {
+
+    //destructuring props
     const { idLeague } = props;
+
+    //useState hook for each league information
     const [league, setLeague] = useState({});
+
+    //destructuring data from league object
     const { strLeague, strBadge, strSport } = league;
 
+    //useEffect hook to load details information
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${idLeague}`)
             .then(res => res.json())

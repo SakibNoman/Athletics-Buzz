@@ -3,6 +3,8 @@
   opacity: 0.8;
   z-index: 0;
 }
+
+/* App Name which is in Top side */
 .app-name {
   color: white;
   position: absolute;
@@ -13,6 +15,8 @@
   font-size: 4vw;
   font-weight: bolder;
 }
+
+/* Conditionally rendered images width */
 .league-image {
   width: 12%;
 }

@@ -4,7 +4,11 @@ import TeamCard from '../TeamCard/TeamCard';
 import './Home.css';
 
 const Home = () => {
+
+    //useState hook for store array of league
     const [leagueList, setLeagueList] = useState([]);
+
+    //useEffect hook to load json data of leagues
     useEffect(() => {
         fetch('https://www.thesportsdb.com/api/v1/json/1/all_leagues.php')
             .then(res => res.json())
