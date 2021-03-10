@@ -17,7 +17,7 @@ const Header = () => {
         el = <img className="app-name league-image" src={logo} alt="" ></img>;
     }
     else {
-        el = <h3 className="app-name" >Athletics Buzz</h3>
+        el = <p className="app-name" >Athletics Buzz</p>
     }
 
     return (

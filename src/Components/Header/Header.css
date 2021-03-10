@@ -10,6 +10,8 @@
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+  font-size: 4vw;
+  font-weight: bolder;
 }
 .league-image {
   width: 12%;

@@ -17,7 +17,7 @@ const TeamCard = (props) => {
     }, [idLeague])
 
     return (
-        <div className="col-md-4 p-3 " >
+        <div className="col-xl-4 col-lg-6 col-sm-12 col-12 p-3 d-flex justify-content-center " >
             <Card as={Link} to={"/league/" + idLeague + "/" + strLeague} className="p-2 league-card" style={{ textDecoration: "none", color: "inherit" }}>
                 <Card.Img className="w-50 mx-auto " variant="top" src={strBadge} />
                 <Card.Body className="d-flex flex-column justify-content-center " >

@@ -34,7 +34,7 @@ const TeamDetails = () => {
 
     return (
         <div className="detailsBody">
-            <div className="pt-5" >
+            <div className=" p-5 " >
                 <Container className="info-card rounded text-white" >
                     <div className="row p-3 ">
                         <div className=" d-flex flex-column justify-content-center col-md-6" >
