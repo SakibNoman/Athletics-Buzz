@@ -29,3 +29,12 @@
     width: 22%;
   }
 }
+@media only screen and (max-width: 300px) {
+  .app-name {
+    font-size: 7vw;
+    top: 15%;
+  }
+  .league-image {
+    width: 28%;
+  }
+}
