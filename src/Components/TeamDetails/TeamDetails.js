@@ -19,6 +19,7 @@ const TeamDetails = () => {
 
     //destructuring data from league object
     const { strGender, strSport, strCountry, intFormedYear, strDescriptionEN, strTwitter, strYoutube, strFacebook } = league;
+    console.log(league);
 
     //useEffect hook to load json data
     useEffect(() => {
