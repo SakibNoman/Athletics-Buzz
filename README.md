@@ -12,4 +12,4 @@ Athletics Buzz is a react app where you can find useful information on various l
 
 ## Live Site
 
-[Live Preview](https://stupefied-mestorf-a36e41.netlify.app/)
+[Live Preview](https://60490451f6a15f07d7550c29-stupefied-mestorf-a36e41.netlify.app/)
