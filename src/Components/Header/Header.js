@@ -15,7 +15,7 @@ const Header = () => {
     useEffect(() => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${leagueId}`)
             .then(res => res.json())
-            .then(data => setLogo(data.leagues[0].strLogo))
+            .then(data => setLogo(data.leagues[0].strBadge))
     }, [leagueId])
 
     //Conditional Rendering of Header if route is Home or Details
